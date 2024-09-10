@@ -22,6 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('ambaTransitoResult').innerText = datos.transito.ambaTransito;
     document.getElementById('interiorTransitoResult').innerText = datos.transito.interiorTransito;
 
+    // Inicialmente ocultar todos los gráficos
+    document.querySelectorAll('.chart').forEach(chart => chart.style.display = 'none');
+
+    // Función para mostrar un gráfico
+    function mostrarGrafico(idGrafico) {
+        const grafico = document.getElementById(idGrafico);
+        grafico.style.display = (grafico.style.display === 'none') ? 'block' : 'none';
+    }
+
+    // Añadir evento a cada cuadro
+    document.getElementById('resultadoTodos').addEventListener('click', () => mostrarGrafico('chartTodos'));
+    document.getElementById('resultadoAmba').addEventListener('click', () => mostrarGrafico('chartAmba'));
+    document.getElementById('resultadoInterior').addEventListener('click', () => mostrarGrafico('chartInterior'));
+    document.getElementById('resultadoTransito').addEventListener('click', () => mostrarGrafico('chartTransito'));
+
     // Generar gráficos
     new Chart(document.getElementById('chartTodos'), {
         type: 'bar',
@@ -41,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             labels: ['Totales', 'Demorados'],
             datasets: [{
                 label: 'Amba',
-                data: [datos.amba.totalesAmba,datos.amba.demoradosAmba],
+                data: [datos.amba.totalesAmba, datos.amba.demoradosAmba],
                 backgroundColor: ['#36A2EB', '#FF6384']
             }]
         }

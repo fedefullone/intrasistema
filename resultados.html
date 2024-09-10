@@ -25,6 +25,7 @@
                 <div class="resultado-label">Demorados:</div><div class="resultado-value" id="demoradosTodosResult"></div>
                 <div class="resultado-label">% Demorados:</div><div class="resultado-value" id="porcentajeDemoradosTodos"></div>%
             </div>
+            <canvas id="chartTodos" width="400" height="200" class="chart"></canvas>
         </div>
 
         <!-- Cuadro Amba -->
@@ -36,6 +37,7 @@
                 <div class="resultado-label">Dias max de demora:</div><div class="resultado-value" id="aclaracionAmbaResult"></div>
                 <div class="resultado-label">% Demorados:</div><div class="resultado-value" id="porcentajeDemoradosAmba"></div>%
             </div>
+            <canvas id="chartAmba" width="400" height="200" class="chart"></canvas>
         </div>
 
         <!-- Cuadro Interior -->
@@ -47,6 +49,7 @@
                 <div class="resultado-label">Dias max de demora:</div><div class="resultado-value" id="aclaracionInteriorResult"></div>
                 <div class="resultado-label">% Demorados:</div><div class="resultado-value" id="porcentajeDemoradosInterior"></div>%
             </div>
+            <canvas id="chartInterior" width="400" height="200" class="chart"></canvas>
         </div>
 
         <!-- Cuadro En Tránsito -->
@@ -57,14 +60,9 @@
                 <div class="resultado-label">AMBA:</div><div class="resultado-value" id="ambaTransitoResult"></div>
                 <div class="resultado-label">INTERIOR:</div><div class="resultado-value" id="interiorTransitoResult"></div>
             </div>
+            <canvas id="chartTransito" width="400" height="200" class="chart"></canvas>
         </div>
     </div>
-
-    <!-- Gráficos debajo de los cuadros -->
-    <canvas id="chartTodos" width="400" height="200"></canvas>
-    <canvas id="chartAmba" width="400" height="200"></canvas>
-    <canvas id="chartInterior" width="400" height="200"></canvas>
-    <canvas id="chartTransito" width="400" height="200"></canvas>
 
     <script src="resultados.js"></script>
 </body>
