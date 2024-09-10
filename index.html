@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+    <link rel="icon" href="intra.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="intra.png" alt="Logotipo" class="logo">
+
+    <div class="formulario-contenedor">
+        <div class="form-item">
+            <h2>Todos</h2>
+            <form id="formTodos">
+                <label>Totales: <input type="number" id="totalesTodos"></label><br>
+                <label>AMBA: <input type="number" id="ambaTodos"></label><br>
+                <label>INTERIOR: <input type="number" id="interiorTodos"></label><br>
+                <label>Demorados: <input type="number" id="demoradosTodos"></label><br>
+            </form>
+        </div>
+    
+        <div class="form-item">
+            <h2>Amba</h2>
+            <form id="formAmba">
+                <label>Totales: <input type="number" id="totalesAmba"></label><br>
+                <label>Demorados: <input type="number" id="demoradosAmba"></label><br>
+                <label>Demora Maxima en dias: <input type="text" id="aclaracionAmba"></label><br>
+            </form>
+        </div>
+    
+        <div class="form-item">
+            <h2>Interior</h2>
+            <form id="formInterior">
+                <label>Totales: <input type="number" id="totalesInterior"></label><br>
+                <label>Demorados: <input type="number" id="demoradosInterior"></label><br>
+                <label>Demora Maxima en dias: <input type="text" id="aclaracionInterior"></label><br>
+            </form>
+        </div>
+    
+        <div class="form-item">
+            <h2>En Tránsito</h2>
+            <form id="formTransito">
+                <label>Totales: <input type="number" id="totalesTransito"></label><br>
+                <label>AMBA: <input type="number" id="ambaTransito"></label><br>
+                <label>INTERIOR: <input type="number" id="interiorTransito"></label><br>
+            </form>
+        </div>
+    </div>
+    
+
+    <!-- Botón para agregar datos y redirigir a otra página -->
+    <button onclick="agregarDatos()">Agregar y Ver Resultados</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
