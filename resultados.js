@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         data: {
             labels: ['Totales', 'AMBA', 'INTERIOR'],
             datasets: [{
-                label: 'En Tránsito',
+                label: 'En Deposito',
                 data: [datos.transito.totalesTransito, datos.transito.ambaTransito, datos.transito.interiorTransito],
                 backgroundColor: ['#36A2EB', '#FFCE56', '#4BC0C0']
             }]
