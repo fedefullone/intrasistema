@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('totalesTransitoResult').innerText = datos.transito.totalesTransito;
     document.getElementById('ambaTransitoResult').innerText = datos.transito.ambaTransito;
     document.getElementById('interiorTransitoResult').innerText = datos.transito.interiorTransito;
+    document.getElementById('demoradosTransitoResult').innerText = datos.transito.demoradosTransito;
+    document.getElementById('aclaracionTransitoResult').innerText = datos.transito.aclaracionTransito;
+
 
     // Inicialmente ocultar todos los gráficos
     document.querySelectorAll('.chart').forEach(chart => chart.style.display = 'none');
@@ -45,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             datasets: [{
                 label: 'Todos',
                 data: [datos.todos.totalesTodos, datos.todos.ambaTodos, datos.todos.interiorTodos, datos.todos.demoradosTodos],
-                backgroundColor: ['#36A2EB', '#FFCE56', '#FF6384', '#4BC0C0']
+                backgroundColor: ['#36A2EB','#4BC0C0', '#FF6384', '#FFCE56']
             }]
         }
     });
@@ -77,11 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
     new Chart(document.getElementById('chartTransito'), {
         type: 'bar',
         data: {
-            labels: ['Totales', 'AMBA', 'INTERIOR'],
+            labels: ['Totales', 'AMBA', 'INTERIOR', 'Demorados'],
             datasets: [{
                 label: 'En Deposito',
-                data: [datos.transito.totalesTransito, datos.transito.ambaTransito, datos.transito.interiorTransito],
-                backgroundColor: ['#36A2EB', '#FFCE56', '#4BC0C0']
+                data: [datos.transito.totalesTransito, datos.transito.ambaTransito, datos.transito.interiorTransito, datos.transito.demoradosTransito],
+                backgroundColor: ['#36A2EB', '#FFCE56', '#4BC0C0', '#FF6384']
             }]
         }
     });

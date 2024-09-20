@@ -22,13 +22,16 @@ function agregarDatos() {
     const totalesTransito = parseInt(document.getElementById('totalesTransito').value) || 0;
     const ambaTransito = parseInt(document.getElementById('ambaTransito').value) || 0;
     const interiorTransito = parseInt(document.getElementById('interiorTransito').value) || 0;
+    const demoradosTransito = parseInt(document.getElementById('demoradosTransito').value) || 0;
+    const aclaracionTransito = parseInt(document.getElementById('aclaracionTransito').value) || 0;
+
 
     // Guardar los datos en localStorage para redirigir a la página de resultados
     const datos = {
         todos: { totalesTodos, ambaTodos, interiorTodos, demoradosTodos, porcentajeDemoradosTodos },
         amba: { totalesAmba, demoradosAmba, aclaracionAmba, porcentajeDemoradosAmba },
         interior: { totalesInterior, demoradosInterior, aclaracionInterior, porcentajeDemoradosInterior },
-        transito: { totalesTransito, ambaTransito, interiorTransito }
+        transito: { totalesTransito, ambaTransito, interiorTransito, demoradosTransito, aclaracionTransito }
     };
 
     localStorage.setItem('datos', JSON.stringify(datos));
