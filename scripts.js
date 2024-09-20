@@ -24,6 +24,8 @@ function agregarDatos() {
     const interiorTransito = parseInt(document.getElementById('interiorTransito').value) || 0;
     const demoradosTransito = parseInt(document.getElementById('demoradosTransito').value) || 0;
     const aclaracionTransito = parseInt(document.getElementById('aclaracionTransito').value) || 0;
+    const porcentajeDemoradosTransito = (totalesTransito > 0) ? (demoradosTransito / totalesTransito * 100).toFixed(2) : 0;
+
 
 
     // Guardar los datos en localStorage para redirigir a la página de resultados
@@ -31,7 +33,7 @@ function agregarDatos() {
         todos: { totalesTodos, ambaTodos, interiorTodos, demoradosTodos, porcentajeDemoradosTodos },
         amba: { totalesAmba, demoradosAmba, aclaracionAmba, porcentajeDemoradosAmba },
         interior: { totalesInterior, demoradosInterior, aclaracionInterior, porcentajeDemoradosInterior },
-        transito: { totalesTransito, ambaTransito, interiorTransito, demoradosTransito, aclaracionTransito }
+        transito: { totalesTransito, ambaTransito, interiorTransito, demoradosTransito, aclaracionTransito, porcentajeDemoradosTransito }
     };
 
     localStorage.setItem('datos', JSON.stringify(datos));

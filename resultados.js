@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('interiorTransitoResult').innerText = datos.transito.interiorTransito;
     document.getElementById('demoradosTransitoResult').innerText = datos.transito.demoradosTransito;
     document.getElementById('aclaracionTransitoResult').innerText = datos.transito.aclaracionTransito;
+    document.getElementById('porcentajeDemoradosTransito').innerText = datos.transito.porcentajeDemoradosTransito;
+
 
 
     // Inicialmente ocultar todos los gráficos
